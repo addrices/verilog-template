@@ -1,6 +1,7 @@
 {
   "files.associations": {
     "*.scala": "chisel",
-    "random": "cpp"
+    "random": "cpp",
+    "new": "cpp"
   }
 }
