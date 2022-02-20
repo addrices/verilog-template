@@ -1,7 +1,7 @@
 # Verilog-template
 
 simple verilog template,can easy test by verilator
-Verilator 4.038
+Verilator 4.216
 
 ## 使用方法
 
