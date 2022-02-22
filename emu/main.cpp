@@ -13,12 +13,21 @@ double sc_time_stamp()
 
 int main(int argc, char **argv)
 {
+  // transmit argv to hardware class
   Verilated::commandArgs(argc, argv);
   // Open trace record
+#ifdef __TRACE__
   Verilated::traceEverOn(true);
-  // Create logs/ directory in case we have traces to put under it
   Verilated::mkdir("logs");
+#endif
+  // Create logs/ directory in case we have traces to put under it
   auto dut = std::make_shared<emu>();
+    dut->clk = 0;
+    dut->eval();
+    main_time++;
+    dut->clk = 0;
+    dut->eval();
+    main_time++;
 
     dut->clk = 0;
     dut->a = 3;
